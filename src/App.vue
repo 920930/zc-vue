@@ -1,19 +1,19 @@
 <template>
-  <header>
-    <img src="/0.png" style="width: 100%" alt="">
-  </header>
-
+  <HeaderVue />
   <RouterView />
-  <footer>中储福森集团</footer>
+  <FooterVue />
 </template>
 
 <script setup lang="ts">
 import { inject, ref, provide, readonly } from "vue";
-import { RouterView } from 'vue-router'
+import { RouterView } from "vue-router";
 import { getConfig } from "@/utils/index";
-const wx: any = inject("wx");
-const appId = ref('')
-provide('appId', readonly(appId))
+import FooterVue from "./pages/footer.vue";
+import HeaderVue from "./pages/header.vue";
 
-getConfig(wx).then((ret) => appId.value = ret.appId);
+const wx: any = inject("wx");
+const appId = ref("");
+provide("appId", readonly(appId));
+
+getConfig(wx).then((ret) => (appId.value = ret.appId));
 </script>
