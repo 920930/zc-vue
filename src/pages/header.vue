@@ -1,5 +1,5 @@
 <template>
-  <section class="header">首页</section>
+  <section class="header"></section>
 </template>
 
 <script lang="ts" setup>

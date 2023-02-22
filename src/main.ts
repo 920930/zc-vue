@@ -13,5 +13,6 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.provide('wx', wx)
+// app.config.globalProperties.$url = 'http://192.168.2.116:7001';
 
 app.mount('#app')

@@ -10,3 +10,7 @@ li {
 .active {
   color: red;
 }
+img{
+  margin: 0;
+  padding: 0;
+}
